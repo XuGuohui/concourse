@@ -7,4 +7,5 @@ echo "Hello world!" >task_output/hello_world.txt
 ls task_output/*
 
 echo "Current directory:"
-pwd
+pwd && ls && cd ../
+pwd && ls && cd ../
