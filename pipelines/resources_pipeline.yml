@@ -11,4 +11,4 @@ jobs:
     plan:
       - get: concourse-repo
       - task: hello-world
-        file: ./concourse/scripts/hello_world.sh
+        file: concourse/scripts/hello_world.sh
