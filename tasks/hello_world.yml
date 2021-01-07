@@ -9,4 +9,4 @@ image_resource:
   source: {repository: busybox}
 
 run:
-  path: ./concourse-repo/scripts/hello_world.sh
+  path: concourse-repo/scripts/hello_world.sh
