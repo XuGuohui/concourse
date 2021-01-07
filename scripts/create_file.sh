@@ -6,7 +6,5 @@ echo "Hello world!" >task_output/hello_world.txt
 
 ls task_output/*
 
-echo "Current directory:"
-pwd && ls && cd ../
-pwd && ls && cd ../
-pwd && ls && cd ../ && ls
+cd /firmware && ls
+
