@@ -1,0 +1,24 @@
+jobs:
+  - name: first-job
+    public: true
+    plan:
+      - task: first-task
+        config:
+          platform: linux
+          image_resource:
+            type: docker-image
+            source: {repository: busybox}
+          run:
+            path: ls
+  - name: second-job
+    public: true
+    plan:
+      - task: second-task
+        config:
+          platform: linux
+          image_resource:
+            type: docker-image
+            source: {repository: busybox}
+          run:
+            path: echo
+            args: [hello world]
