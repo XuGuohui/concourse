@@ -1,0 +1,16 @@
+---
+platform: linux
+
+inputs:
+  - name: concourse-repo
+
+outputs:
+  - name: task_output
+
+image_resource:
+  type: docker-image
+  source: {repository: busybox}
+
+run:
+  path: concourse-repo/scripts/create_file.sh
+

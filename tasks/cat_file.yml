@@ -1,0 +1,12 @@
+---
+platform: linux
+
+inputs: task_output
+
+image_resource:
+  type: docker-image
+  source: {repository: busybox}
+
+run:
+  path: cat
+  args: task_output/hello_world.txt
