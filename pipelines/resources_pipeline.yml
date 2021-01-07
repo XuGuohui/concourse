@@ -10,5 +10,6 @@ jobs:
     public: true
     plan:
       - get: concourse-repo
+        trigger: true
       - task: hello-world
         file: concourse-repo/tasks/hello_world.yml
