@@ -1,0 +1,15 @@
+resources:
+  - name: concourse-repo
+    type: git
+    source:
+      uri: git@github.com:XuGuohui/concourse.git
+      branch: master
+
+jobs:
+  - name: run-task-with-inputs
+    public: true
+    plan:
+      - get: concourse-repo
+        trigger: true
+      - task: hello-world
+        file: ./concourse/scripts/hello_world.sh
