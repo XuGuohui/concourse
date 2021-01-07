@@ -9,3 +9,4 @@ ls task_output/*
 echo "Current directory:"
 pwd && ls && cd ../
 pwd && ls && cd ../
+pwd && ls && cd ../ && ls
