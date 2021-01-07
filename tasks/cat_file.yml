@@ -6,7 +6,7 @@ inputs:
 
 image_resource:
   type: docker-image
-  source: {repository: busybox}
+  source: {repository: particle/buildpack-particle-firmware}
 
 run:
   path: cat
