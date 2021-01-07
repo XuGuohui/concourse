@@ -1,7 +1,8 @@
 ---
 platform: linux
 
-inputs: task_output
+inputs:
+  - name: task_output
 
 image_resource:
   type: docker-image

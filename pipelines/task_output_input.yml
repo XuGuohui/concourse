@@ -1,17 +1,17 @@
 resources:
-  name: concourse-repo
-  type: git
-  source:
-    uri: https://github.com/XuGuohui/concourse.git
-    branch: master
+  - name: concourse-repo
+    type: git
+    source:
+      uri: https://github.com/XuGuohui/concourse.git
+      branch: master
 
 jobs:
-  name: task-output-input
-  public: true
-  plan:
-    - get: concourse-repo
-    - task: create-file
-      file: concourse-repo/tasks/create_file.yml
-    - task: show-file
-      file: concourse-repo/tasks/cat_file.yml
+  - name: task-output-input
+    public: true
+    plan:
+      - get: concourse-repo
+      - task: create-file
+        file: concourse-repo/tasks/create_file.yml
+      - task: show-file
+        file: concourse-repo/tasks/cat_file.yml
   
