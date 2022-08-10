@@ -5,11 +5,28 @@ jobs:
       - task: first-task
         config:
           platform: linux
+          outputs:
+            - name: my-folder
           image_resource:
             type: docker-image
             source: {repository: busybox}
           run:
             path: ls
+            args: ["-lF"]
+      - task: second-task
+        config:
+          platform: linux
+          inputs:
+            - name: my-folder
+          image_resource:
+            type: docker-image
+            source: {repository: busybox}
+          run:
+            path: sh
+            args:
+              - -cx
+              - |
+                ls .
   - name: second-job
     public: true
     plan:
