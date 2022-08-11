@@ -2,5 +2,7 @@
 
 echo "hello world!"
 
-ls .
+cd concourse-repo
+
+ls -lF
 
